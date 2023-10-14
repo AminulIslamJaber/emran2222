@@ -1,0 +1,290 @@
+*{
+
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    
+    
+}
+[class*="col"]{
+    width: 100%;
+}
+h1{
+    font-size: 1.7rem;
+    text-align: center;
+    
+}
+a{
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+.dotted-hr{
+    border: dotted 6px;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 70px;
+}
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+
+/* for mobile  */
+[class*="col-"]{
+    width: 100%;
+}
+
+.navbar{
+    background-color: #0c6168 ;
+    padding: 1% 7%;
+    text-align: center;
+}
+.navbar-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.navbar h1{
+    color:  white;
+    margin: 0;
+    padding-top: 8px;
+}
+.navbar-menu a{
+    background-color: deepskyblue;
+    border-radius: 29px;
+    margin: 7px 0px;
+    box-shadow: 1px 1px 1px #40868b;
+}
+.navbar-menu a:hover{
+    background-color: gray;
+}
+.navbar::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+/* navbar end here */
+
+
+/* profile start here */
+
+.profile{
+    padding: 130px 10px ;
+    position: relative;
+    text-align: center;
+}
+.profile .top-weather-icon{
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    transition: 2s;
+}
+.profile .top-weather-icon:hover{
+   transform: rotate(360deg);
+}
+.profile-desc{
+    font-family: 'satisfy', cursive;
+}
+
+.profile-desc p{
+    color: gray;
+    margin: 0 auto 20px auto;
+    width: 90%;
+    text-align: center;
+}
+
+.profile .bot-weather-icon{
+    position: absolute;
+    left: 60px;
+    bottom: 10px;
+    transition: 2s;
+}
+.profile .bot-weather-icon:hover{
+   transform: rotate(360deg);
+}
+
+.profile::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+/* profile end here */
+
+/* about me strt here */
+h2{
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.about-me{
+    background-color:#39a4ac ;
+    padding: 1% 7%;
+    color: white;
+    text-align: center;
+    font-family:'Montserrat' , sans-serif ;
+}
+
+.about-image img{
+    border:5px solid white;
+    border-radius: 50%;
+    height: 220px;
+    width: 200px;
+}
+.about-me p{
+    text-align: center;
+}
+.about-me{
+    font-size: 1.3rem;
+}
+.cv-button{
+    background-color:black ;
+    color: white;
+    border: none;
+    border-radius: 19px;
+    padding: 15px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.about-me::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+/* about me end here */
+
+
+/* pro exp start here */
+ .professional-experiance{
+    padding: 1% 0%;
+ }
+ .professional-experiance .card{
+    background-color:#a39e9e ;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.3s;
+    /* height: 700px; */
+    /* width: 550px; */
+ }
+.card:hover{
+    box-shadow: 0 4px 8px 5px black;
+ }
+ .card-icon{
+    text-align: center;
+    
+ }
+ .roundimg{
+    border: 5px solid white;
+    border-radius: 50%;
+    padding: 15px;
+
+ }
+ .card-title h2{
+    background-color: #616161;
+    color: white;
+    padding: 10px;
+    text-align: center;
+ }
+ /* .card-desc ul li{
+    padding: 10px;
+    font-size: 15px;
+ } */
+.skill-container{
+    padding-right: 45px;
+}
+.skill-container li{
+    list-style: none;
+    font-weight: bolder;
+    margin: 30px 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+.skill-container li::before{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 100%;
+    height: 10px;
+    left: 0px;
+    border-radius: 1000px;
+    background-color: rgb(86,86 ,153,.5);
+}
+/* #card3{
+    height: 580px;
+} */
+
+.skill-container li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 0;
+    height: 10px;
+    left: 0;
+    border-radius: 1000px;
+    background-color: rgb(86,86 ,153,1);
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+.skill-container li.AutoCAD::after{
+    animation-name:AutoCAD ;
+}
+@keyframes AutoCAD {
+    to{
+        width: 94%;
+    }
+}
+.skill-container li.revit::after{
+    animation-name:revit ;
+}
+@keyframes revit {
+    to{
+        width: 89%;
+    }
+}
+.skill-container li.ms::after{
+    animation-name:ms;
+}
+@keyframes ms {
+    to{
+        width: 95%;
+    }
+}
+.skill-container li.team::after{
+    animation-name:team ;
+}
+@keyframes team {
+    to{
+        width: 85%;
+    }
+}
+.skill-container li.business::after{
+    animation-name:business;
+}
+@keyframes business {
+    to{
+        width: 85%;
+    }
+    
+}
+.skill-container li.communication::after{
+    animation-name:communication ;
+}
+@keyframes communication {
+    to{
+        width: 90%;
+    }
+    
+}
+
+/* pro exp end here */
+
